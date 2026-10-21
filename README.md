@@ -32,9 +32,3 @@ Set `OPENAI_API_KEY` to use an OpenAI model as the brain (model name is in `brai
 - `src/drugagent/app.py`: Gradio page showing answer, tool calls and guardrail events
 - `src/healthmcp/`: a vendored copy of the Agent 3 server, with one addition: `HEALTHMCP_POISON=1` plants the hostile text in a trial title. Agent 3 is the standalone server repo.
 
-## What I did and didn't test
-- 32 tests pass: guards, the loop against the real MCP server over stdio, and the OpenAI path against a scripted fake client.
-- Not tested: the live openFDA and ClinicalTrials.gov calls (those sites were unreachable where I built this), and the real OpenAI API.
-- The offline stand-in only understands its own phrasings.
-- Demo data is fictional (invented drug names, trial ids starting NCT9). Nothing here is medical information or advice.
-# Drug-Trial-Agent
