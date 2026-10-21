@@ -1,0 +1,6 @@
+mcp>=1.2,<2    # tested on 1.27; mcp 2.x renamed FastMCP
+httpx
+pydantic>=2.5
+gradio>=5
+openai               # only used if OPENAI_API_KEY is set
+pytest
