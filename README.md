@@ -17,14 +17,6 @@ Tool results are treated as untrusted. Text that looks like an instruction is sc
 ## Concepts covered
 MCP client (stdio, tool discovery), tool-calling loop with the OpenAI SDK (function calling: tool_calls and tool messages), parallel tool calls, error recovery, prompt injection defence, output grounding checks, scope guardrails.
 
-## Run it
-```
-pip install -r requirements.txt
-PYTHONPATH=src python -m drugagent.app      # http://localhost:7860
-PYTHONPATH=src pytest -q
-```
-Set `OPENAI_API_KEY` to use an OpenAI model as the brain (model name is in `brains.py`, check it is the one you want). Without a key it uses a small keyword-rule stand-in so everything still runs. Set `DRUGAGENT_LIVE=1` for real openFDA / ClinicalTrials.gov data.
-
 ## Layout
 - `src/drugagent/agent.py`: the loop
 - `src/drugagent/guards.py`: scope check, tool filter, scrubbing, grounding check
